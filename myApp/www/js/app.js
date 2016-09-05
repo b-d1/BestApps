@@ -32,29 +32,45 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.apps', {
+    url: '/apps',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/apps.html'
+      }
+    }
+  })
+    .state('app.top-rated', {
+    url: '/top-rated',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/top-rated.html'
+      }
+    }
+  })
+    .state('app.top-downloaded', {
+    url: '/top-downloaded',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/top-downloaded.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.home', {
+      url: '/home',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/home.html'
         }
       }
     })
-    .state('app.playlists', {
-      url: '/playlists',
+    .state('app.games', {
+      url: '/games',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/games.html'
+          // controller: 'PlaylistsCtrl'
         }
       }
     })
@@ -67,7 +83,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  })
+    .state('app.guide', {
+      url: '/guide',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/search.html'
+        }
+      }
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });
