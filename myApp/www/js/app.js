@@ -32,11 +32,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.apps', {
-    url: '/apps',
+  .state('app.all-apps', {
+    url: '/all-apps',
     views: {
       'menuContent': {
-        templateUrl: 'templates/apps.html'
+        templateUrl: 'templates/apps/all-apps.html'
       }
     }
   })
@@ -65,22 +65,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-    .state('app.games', {
-      url: '/games',
+    .state('app.all-games', {
+      url: '/all-games',
       views: {
         'menuContent': {
-          templateUrl: 'templates/games.html'
-          // controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/apps/all-games.html'
+          // controller: 'AppsCtl'
         }
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+  .state('app.single-app', {
+    url: '/apps/:id',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/apps/single-app.html'
       }
     }
   })
@@ -88,7 +87,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/guide',
       views: {
         'menuContent': {
-          templateUrl: 'templates/search.html'
+          templateUrl: 'templates/guide.html'
         }
       }
     });
