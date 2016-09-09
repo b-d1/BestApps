@@ -5,6 +5,7 @@
     margin-right:auto;
 }
 
+<<<<<<< HEAD
 body, html {
   cursor: url('http://ionicframework.com/img/finger.png'), auto; }
 
@@ -15,3 +16,70 @@ div.hscroller {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); 
 }
+=======
+.text-center {
+    text-align:center;
+}
+
+/* ====== Single App styles ====== */
+
+
+.single-app-header {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.single-app-body {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.single-app-properties {
+        margin-top: 5px;
+}
+
+.single-app-header p {
+    margin-bottom:0 !important;
+}
+.single-app-img {
+    width:100%;
+}
+
+.single-app-body .app-section {
+    margin:15px;
+}
+.app-section p {
+    margin-bottom:2px;
+}
+
+.single-app-body h5 {
+    margin:15px;
+    font-size:16px;
+    color: #333333;
+}
+.app-properties-m, .single-app-subtitle {
+    text-transform:uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.app-properties {
+    color: #2c8aff;
+}
+
+.app-rating {
+    padding:4px;
+    border-radius:6px;
+    background-color:#f3f3f3;
+}
+
+.rt-good {
+    color:#33cd5f  !important;
+}
+.rt-bad {
+    color:#ff3737 !important;
+}
+
+
+/* ====== /Single App styles ====== */
+>>>>>>> 32f94f39b8c71ca7a7b5075cb5ef9dfb8013e458

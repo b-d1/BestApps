@@ -68,6 +68,13 @@ angular.module('starter.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
 })
+.controller('singleAppCtl', function($scope, $stateParams, $ionicModal) {
+var vm = this;
+console.log("$stateParams", $stateParams);
+
+
+
+})
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
