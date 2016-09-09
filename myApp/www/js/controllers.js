@@ -41,6 +41,23 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('myCtrl', function($scope) {
+  $scope.tasks = [
+    { title: 'Instagram' , category: 'Social Media', avatar: '../img/instagram.png', downloads: 100, rating: '4.5', stars: "✮ ✮ ✮ ✮ ✡"},
+    { title: 'Snapchat' , category: 'Social Media',  avatar: '../img/snapchat.png',  downloads: 120, rating: '3', stars: "✮ ✮ ✮ ✮ ✮"},
+    { title: 'PokemonGo' , category: 'Games',  avatar: '../img/pokemongo.png', downloads: 10, rating: '5', stars:"✮ ✮ ✮ ✮ ✮"},
+    { title: 'TinyScanner' , category: 'Scanner',  avatar: '../img/tinyscanner.png', downloads: 1, rating:'0.5', stars:"✡ ✡ ✡ ✡ ✡"},
+    { title: 'Can You Escape?' , category: 'Games',  avatar: '../img/canyouescape.png', downloads: 3, rating: '1', stars: "✮ ✡ ✡ ✡ ✡"},
+    { title: 'Skype' ,  category: 'Social Media', avatar: '../img/skype.png',  downloads: 150, rating: '5', stars: "✮ ✮ ✮ ✮ ✮"},
+    { title: 'Outlook' ,  category: 'E-mail', avatar: '../img/outlook.png', downloads: 90, rating: '4', stars:"✮ ✮ ✮ ✮ ✡"},
+    { title: 'QuizUp' , category: 'Games',  avatar: '../img/quizup.png', downloads: 18, rating:'2', stars:"✮ ✮ ✡ ✡ ✡"},
+    { title: 'Backgammon' , category: 'Games',  avatar: '../img/backgammon.png', downloads: 2, rating: '0.2', stars: " ✡ ✡ ✡ ✡ ✡"},
+    { title: 'Learn SQL' , category: 'Educational',  avatar: '../img/learnsql.png',  downloads: 3, rating: '1', stars: "✮ ✡ ✡ ✡ ✡"},
+    { title: 'Piano Tiles' ,  category: 'Games',  avatar: '../img/pianotiles.png', downloads: 105, rating: '5', stars:"✮ ✮ ✮ ✮ ✮"},
+    { title: 'Photoshop Express' , category: 'Photo editor',  avatar: '../img/photoshop.png', downloads: 25, rating:'4.3', stars:"✮ ✮ ✮ ✮ ✡"}
+  ];
+})
+
 .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },

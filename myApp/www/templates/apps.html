@@ -1,5 +1,20 @@
-<ion-view view-title="Apps">
-  <ion-content>
-    <h1>Apps</h1>
-  </ion-content>
+<ion-view view-title="Apps"> 
+  
+   <ion-content style="background-color:" ng-controller="myCtrl">
+    <div class="list">
+      <script>var name={{title}}</script>
+    <a class="item item-avatar item-icon-right" href="templates/singleApp.html" ng-repeat="task in tasks | orderBy:'category'">
+   
+      <img src= {{task.avatar}}>
+      <h2><b>{{task.title}}</b>
+      <i class="icon ion-chevron-right icon-accessory"></i></h2>
+      <p>Category:  <b>{{task.category}}</b></p>
+      <p>Downloads:   <b>{{task.downloads}}k</b></p>
+      <p>Rating:    <b>{{task.rating}}    <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+      
+     
+    </a>
+
+    </div>
+  
 </ion-view>

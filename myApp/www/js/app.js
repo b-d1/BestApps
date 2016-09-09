@@ -8,7 +8,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // Hide the accessory bar by default (remove this to show the acc essory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   $stateProvider
 
     .state('app', {
@@ -40,6 +40,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+   .state('app.singlePage', {
+      url:'/singlePage',
+      views: {
+        'menuContent':{
+          templateUrl: 'templates/singlePage.html'
+        }
+      }
+    })
     .state('app.top-rated', {
     url: '/top-rated',
     views: {
@@ -94,4 +102,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
+      $ionicConfigProvider.tabs.position('bottom');
+  
 });
