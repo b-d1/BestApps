@@ -1,5 +1,21 @@
 <ion-view view-title="Top rated">
-  <ion-content>
-    <h1>Top rated</h1>
-  </ion-content>
+
+  <ion-content style="background-color:" ng-controller="myCtrl">
+    <div class="list">
+                 <span ng-repeat="task in apps | orderBy:'-rating' | limitTo: 5">
+    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
+
+          <img src= {{task.avatar}}>
+          <h2><b>{{task.title}}</b>
+          <i class="icon ion-chevron-right icon-accessory"></i></h2>
+          <p>Category:  <b>{{task.category}}</b></p>
+          <p>Downloads:   <b>{{task.downloads}}k</b></p>
+          <p>Rating:    <b>   <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+
+
+      </a>
+      </span>
+
+    </div>
+  
 </ion-view>

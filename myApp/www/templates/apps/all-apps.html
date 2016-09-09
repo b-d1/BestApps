@@ -1,12 +1,21 @@
-<ion-view view-title="Apps">
-  <ion-content>
-    <h5 class="text-center">Categories</h1>
-    <ion-list>
-      <ion-item class="item-thumbnail-left">
-        <img src="img/logo.png" alt="">
-        <h3>App name</h3>
-      </ion-item>
-    </ion-list>
+<ion-view view-title="Apps"> 
+  
+   <ion-content style="background-color:" ng-controller="myCtrl">
+    <div class="list">
+      <script>var name={{title}}</script>
+      <span ng-repeat="task in apps | orderBy:'category'">
+    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
    
-  </ion-content>
+      <img src= {{task.avatar}}>
+      <h2><b>{{task.title}}</b>
+      <i class="icon ion-chevron-right icon-accessory"></i></h2>
+      <p>Category:  <b>{{task.category}}</b></p>
+      <p>Downloads:   <b>{{task.downloads}}k</b></p>
+      <p>Rating:    <b>   <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+      
+     
+    </a>
+</span>
+    </div>
+  
 </ion-view>

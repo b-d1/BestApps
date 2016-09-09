@@ -1,5 +1,29 @@
 <ion-view view-title="Top Downloaded">
-  <ion-content>
-    <h1>Top Downloaded</h1>
-  </ion-content>
+ <!--  <ion-tabs class="tabs-icon-top tabs-dark">
+    <ion-tab title="Leagues" icon="ion-home" href="#/home/leagues">
+    	<ion-nav-view name="tab-leagues"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="My Teams" icon="ion-star" ui-sref="home.myteams">
+    	<ion-nav-view name="tab-myteams"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>-->
+  <ion-content style="background-color:" ng-controller="myCtrl">
+    <div class="list">
+      <script>var name={{title}}</script>
+                <span ng-repeat="task in apps | orderBy:'-downloads' | limitTo: 5">
+    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
+   
+      <img src= {{task.avatar}}>
+      <h2><b>{{task.title}}</b>
+      <i class="icon ion-chevron-right icon-accessory"></i></h2>
+      <p>Category:  <b>{{task.category}}</b></p>
+      <p>Downloads:   <b>{{task.downloads}}k</b></p>
+      <p>Rating:    <b>    <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+      
+     
+    </a>
+    </span>
+
+    </div>
+  
 </ion-view>

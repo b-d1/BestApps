@@ -41,13 +41,18 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('singleAppCtl', function($scope, $stateParams, $ionicModal) {
+.controller('singleAppCtl', function($scope, $stateParams, $ionicModal, bestAppsApi) {
 var vm = this;
-console.log("$stateParams", $stateParams);
-
-
-
+var id = $stateParams.id;
+console.log("Item id:", id);
+$scope.app = bestAppsApi.getApp(id);
 })
+
+
+.controller('myCtrl', function($scope, bestAppsApi) {
+  $scope.apps = bestAppsApi.getApps();
+})
+
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

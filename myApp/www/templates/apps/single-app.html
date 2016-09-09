@@ -1,14 +1,14 @@
 <ion-view ng-controller="singleAppCtl">
   <ion-content>
-    <h5 class="text-center">Sample app</h5>
+    <h5 class="text-center">{{app.title}}</h5>
    <div class="row single-app-header">
-     <div class="col col-33"><img src="img/pokemon-go-icon.png" alt="" class="single-app-img"></div>
+     <div class="col col-33"><img src="{{app.avatar}}" alt="" class="single-app-img"></div>
         <div class="col single-app-properties">    
-        <p><span class='app-properties-m'>Downloads</span> <span class='app-properties'>1,252</span></p>
-        <p><span class='app-properties-m'>User Ratings</span>  <span class='app-properties'>9.2</span></p>
+        <p><span class='app-properties-m'>Downloads</span> <span class='app-properties'>{{app.downloads}}k</span></p>
+        <p><span class='app-properties-m'>User Ratings</span>  <span class='app-properties'>{{app.rating}}</span></p>
         <p><span class='app-properties-m'>BestApps Ratings</span>  <span class='app-properties'>9.2</span></p>
         <p><span class='app-properties-m'>Relased by</span> <span class='app-properties'>BestApps studios</span></p>
-        <p><span class='app-properties-m'>Category</span> <span class='app-properties'> Games</span></p>
+        <p><span class='app-properties-m'>Category</span> <span class='app-properties'> {{app.category}}</span></p>
         </div>
    </div>
    <div class="single-app-body">
@@ -30,7 +30,7 @@
    </div>
    <div class="row single-app-footer">
      <div class="col"><a href="#" onclick="window.open('http://www.google.com', '_system', 'location=yes'); return false;" class="button button-positive button-block"><i class="icon ion-android-download"></i> Download app</a></div>
-     <!--<div class="col"><a href="#" class="button button-balanced button-block"><i class="icon ion-ios-information-outline"></i> More info </a></div>-->
+     <div class="col"><a href="#" class="button button-balanced button-block"><i class="icon ion-ios-information-outline"></i> More info </a></div>
    </div>
 
    
