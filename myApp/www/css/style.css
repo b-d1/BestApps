@@ -70,3 +70,35 @@
 
 
 /* ====== /Single App styles ====== */
+
+
+
+.custom-row
+{
+  display: block;
+  padding: 5px;
+  margin: 10px 0px 10px;
+  width: 100%;
+  height:100%;
+
+}
+.card i
+{
+  color:black;
+  padding-top: 5px;
+  padding-bottom:5px;
+  font-size: 10px;
+}
+.clearfixc:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfixc { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfixc { height: 1%; }
+.clearfixc { display: block; }
+/* close commented backslash hack */
