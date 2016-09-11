@@ -1,5 +1,5 @@
 <ion-view view-title="Top Downloaded">
- <!--  <ion-tabs class="tabs-icon-top tabs-dark">
+  <!--  <ion-tabs class="tabs-icon-top tabs-dark">
     <ion-tab title="Leagues" icon="ion-home" href="#/home/leagues">
     	<ion-nav-view name="tab-leagues"></ion-nav-view>
     </ion-tab>
@@ -9,8 +9,8 @@
 
   <ion-content style="background-color:" ng-controller="myCtrl">
 
-  <ion-content ng-controller="myCtrl">]
-    <div class="list">
+    <ion-content ng-controller="myCtrl">
+      <div class="list">
         <label class="item item-input item-select">
     <div class="input-label">
       Number of apps
@@ -22,38 +22,34 @@
       <option value="50">50</option>
     </select>
   </label>
-      <script>var name={{title}}</script>
-                <span ng-repeat="task in apps | orderBy:'-downloads' | limitTo: mySelect">
-    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
-                <span ng-repeat="app in apps | orderBy:'-downloads' | limitTo: numberOfApps">
-    <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
-   
-      <img src= "{{app.avatar}}">
-      <h2><b>{{app.title}}</b>
-      <i class="icon ion-chevron-right icon-accessory"></i></h2>
-      <p>Category:  <b>{{task.category}}</b></p>
-      <p>Downloads:   <b>{{task.downloads}}k</b></p>
-      <p>Rating:    <b>    <span style="color:orange; font-size:18px">{{task.stars}}</b></p>
-      <p>Category:  <b>{{app.subCategory}}</b></p>
-      <p>Downloads:   <b>{{app.downloads}}k</b></p>
-      <p>Rating:    <b>    <span class="rating-stars">{{app.stars}}<span></b></p>
-      
-     
-    </a>
+        <script>var name={{title}}</script>
+
+    <span ng-repeat="app in apps | orderBy:'-downloads' | limitTo: numberOfApps">
+          <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
+        
+            <img src= "{{app.avatar}}">
+            <h2><b>{{app.title}}</b>
+            <i class="icon ion-chevron-right icon-accessory"></i></h2>
+            <p>Category:  <b>{{task.category}}</b></p>
+            <p>Downloads:   <b>{{task.downloads}}k</b></p>
+            <p>Rating:    <b>    <span style="color:orange; font-size:18px">{{task.stars}}</b></p>
+            <p>Category:  <b>{{app.subCategory}}</b></p>
+            <p>Downloads:   <b>{{app.downloads}}k</b></p>
+            <p>Rating:    <b>    <span class="rating-stars">{{app.stars}}<span></b></p>
+            
+          
+          </a>
     </span>
-    
-
-    
-
-<<<<<<< HEAD
-=======
-    </div>
-  </ion-content>
-    
->>>>>>> 9fe8a5d126b037aed23098b358edc1248cdac9aa
-  
 
 
-  
+
+
+      </div>
+    </ion-content>
+
+
+
+
+
 
 </ion-view>
