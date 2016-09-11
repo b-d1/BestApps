@@ -1,16 +1,27 @@
 <ion-view view-title="Top rated">
 
-  <ion-content style="background-color:" ng-controller="myCtrl">
+  <ion-content ng-controller="myCtrl">
     <div class="list">
-                 <span ng-repeat="task in apps | orderBy:'-rating' | limitTo: 5">
-    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
+        <label class="item item-input item-select">
+    <div class="input-label">
+      Number of apps
+    </div>
+   <select ng-model="numberOfApps" ng-init="numberOfApps='10'">
+      <option value="5">5</option>
+      <option value="10" ng-selected="true">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+  </label>
+                 <span ng-repeat="app in apps | orderBy:'-rating' | limitTo: numberOfApps">
+    <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
 
-          <img src= {{task.avatar}}>
-          <h2><b>{{task.title}}</b>
+          <img src= "{{app.avatar}}">
+          <h2><b>{{app.title}}</b>
           <i class="icon ion-chevron-right icon-accessory"></i></h2>
-          <p>Category:  <b>{{task.category}}</b></p>
-          <p>Downloads:   <b>{{task.downloads}}k</b></p>
-          <p>Rating:    <b>   <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+          <p>Category:  <b>{{app.subCategory}}</b></p>
+          <p>Downloads:   <b>{{app.downloads}}k</b></p>
+          <p>Rating:    <b>   <span class="rating-stars">{{app.stars}}<span></b></p>
 
 
       </a>

@@ -1,6 +1,41 @@
+<<<<<<< HEAD
 <ion-view view-title="Best Apps">
   <ion-content class="has-header">
  <h4> Home</h4>   
+=======
+
+<ion-view view-title="Best Apps" style="background: #111111;">
+  <ion-content class="has-header" ng-controller="myCtrl" style="background-color: white">
+
+    <div class="container-fluid" style="margin:0 30px;">
+      <div class="custom-row" style="background-color: rgb(26, 32, 51);height: 100%;">
+      <div class="custom-row" >
+        <div class="col-40 inline">
+          <h2 class="text-left" style="color: rgb(88, 255, 202);"><i class="ion-arrow-graph-up-right"></i>Top Rated</h2>
+        </div>
+        <div class="col-40 pull-right inline">
+          <h3 class="text-right" style="color: #E02222;">More</h3>
+        </div>
+      </div>
+      <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:275px;overflow-y: hidden;white-space: nowrap">
+        <div class="padding-left inline " style="width: 150px;height: 230px;margin: 5px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-rating' | limitTo: 15">
+          <div class="list card" style="width: 100%;height: 100%;border: 2px solid aqua;background-color: rgb(71, 78, 90);float: left">
+            <div class="item item-body" style="background-color: rgb(71, 78, 90)">
+              <img class="full-image img-center rounded" src={{task.avatar}} style="width: 40px;height: 40px">
+              <h3 class="text-center">{{task.title}}</h3>
+              <i class="ion-android-download">Download</i>
+              <br>
+              <i class="ion-star">Add to favorite</i>
+              <p id="cli">Google</p>
+            </div>
+          </div>
+        </div>
+        </ion-scroll>
+      </div>
+
+
+    </div>
+>>>>>>> 9fe8a5d126b037aed23098b358edc1248cdac9aa
 
   </ion-content>
 </ion-view>

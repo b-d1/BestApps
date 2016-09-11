@@ -1,17 +1,54 @@
 <ion-view view-title="Apps"> 
   
-   <ion-content style="background-color:" ng-controller="myCtrl">
+   <ion-content ng-controller="myCtrl">
     <div class="list">
+   <label class="item item-input item-select">
+    <div class="input-label">
+      Apps category
+    </div>
+   <select ng-model="subCat" ng-init="subCat='All'">
+     <option value="All" ng-selected="true">All</option>
+      <option value="Books & Reference">Books & Reference</option>
+      <option value="Business">Business</option>
+      <option value="Cinema">Cinema</option>
+      <option value="Comics">Comics</option>
+      <option value="Communication">Communication</option>
+      <option value="Education">Education</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Finance">Finance</option>
+      <option value="Health & Fitness">Health & Fitness</option>
+      <option value="Libraries & Demo">Libraries & Demo</option>
+      <option value="Lifestyle">Lifestyle</option>
+       <option value="Media & Video">Media & Video</option>
+      <option value="Medical">Medical</option>
+      <option value="Music & Audio">Music & Audio</option>
+      <option value="News & Magazines">News & Magazines</option>
+      <option value="Personalization">Personalization</option>
+      <option value="Photography">Photography</option>
+      <option value="Productivity">Productivity</option>
+      <option value="Ringtones">Ringtones</option>
+      <option value="Shopping">Shopping</option>
+      <option value="Social">Social</option>
+      <option value="Soundboards">Soundboards</option>
+      <option value="Sports">Sports</option>
+      <option value="Themes">Themes</option>
+      <option value="Tools">Tools</option>
+      <option value="Transportation">Transportation</option>
+            <option value="Travel & Local">Travel & Local</option>
+      <option value="Wallpapers">Wallpapers</option>
+      <option value="Weather">Weather</option>
+    </select>
+  </label>
       <script>var name={{title}}</script>
-      <span ng-repeat="task in apps | orderBy:'category'">
-    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
+      <span ng-repeat="app in apps | filter:{ mainCategory: 'Apps' }" ng-if="checkSubCategory(subCat, app.subCategory)">
+    <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
    
-      <img src= {{task.avatar}}>
-      <h2><b>{{task.title}}</b>
+      <img src= "{{app.avatar}}">
+      <h2><b>{{app.title}}</b>
       <i class="icon ion-chevron-right icon-accessory"></i></h2>
-      <p>Category:  <b>{{task.category}}</b></p>
-      <p>Downloads:   <b>{{task.downloads}}k</b></p>
-      <p>Rating:    <b>   <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+      <p>Category:  <b>{{app.subCategory}}</b></p>
+      <p>Downloads:   <b>{{app.downloads}}k</b></p>
+      <p>Rating:    <b>   <span class="rating-stars">{{app.stars}}<span></b></p>
       
      
     </a>
