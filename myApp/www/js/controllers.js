@@ -9,13 +9,11 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
-<<<<<<< HEAD
+  // Form data for the login modal\
   
   $scope.loginData = {};
-=======
+  
   // $scope.loginData = {};
->>>>>>> 9fe8a5d126b037aed23098b358edc1248cdac9aa
 
   // // Create the login modal that we will use later
   // $ionicModal.fromTemplateUrl('templates/login.html', {
@@ -95,9 +93,7 @@ $ionicModal.fromTemplateUrl('my-modal.html', {
 
 .controller('myCtrl', function($scope, bestAppsApi) {
   $scope.apps = bestAppsApi.getApps();
-<<<<<<< HEAD
   $scope.mySelect = 5;
-=======
 
   $scope.checkSubCategory = function(subCatSelect, subCategory) {
 console.log(subCatSelect + " " + subCategory);
@@ -110,7 +106,6 @@ console.log(subCatSelect + " " + subCategory);
   }
 
 
->>>>>>> 9fe8a5d126b037aed23098b358edc1248cdac9aa
 })
 
 
