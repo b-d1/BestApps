@@ -124,7 +124,7 @@ font-weight:700;
   color:black;
   padding-top: 5px;
   padding-bottom:5px;
-  font-size: 10px;
+  font-size: 14px;
 }
 .clearfixc:after {
   visibility: hidden;
@@ -142,4 +142,12 @@ font-weight:700;
 .scroll-view.scroll-x
 {
   overflow: hidden;
+}
+i
+{
+  font-size:15px;
+}
+a
+{
+  text-decoration: none;
 }
