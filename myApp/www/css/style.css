@@ -11,7 +11,12 @@
 
 /* ====== Single App styles ====== */
 
-
+.howMany {
+    text-align: center;
+    background-color:#333333;
+    border-style: inset;
+    color:white;
+}
 .single-app-header {
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;

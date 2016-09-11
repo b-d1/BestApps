@@ -10,6 +10,7 @@ angular.module('starter.controllers', [])
   //});
 
   // Form data for the login modal
+  
   $scope.loginData = {};
 
   // Create the login modal that we will use later
@@ -51,6 +52,7 @@ $scope.app = bestAppsApi.getApp(id);
 
 .controller('myCtrl', function($scope, bestAppsApi) {
   $scope.apps = bestAppsApi.getApps();
+  $scope.mySelect = 5;
 })
 
 
