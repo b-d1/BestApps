@@ -19,7 +19,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
     { id: 11, title: 'Piano Tiles' ,  mainCategory: 'Games',  subCategory: 'Music', avatar: 'img/pianotiles.png', downloads: 105, rating: '5', stars:"✮ ✮ ✮ ✮ ✮"},
     { id: 12, title: 'Photoshop Express' , mainCategory: 'Apps', subCategory: 'Tools',  avatar: 'img/photoshop.png', downloads: 25, rating:'4.3', stars:"✮ ✮ ✮ ✮ ✡"}
   ];
-
+ // $state.mySelect=5;
   function getApps() {
       return apps;
   }
@@ -27,6 +27,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
   function getApp(id) {
  var single_item = $filter('filter')(apps, {id:id})[0];
  return single_item;
+
   }
 
 

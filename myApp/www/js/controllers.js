@@ -9,7 +9,10 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
+  // Form data for the login modal\
+  
+  $scope.loginData = {};
+  
   // $scope.loginData = {};
 
   // // Create the login modal that we will use later
@@ -90,6 +93,7 @@ $ionicModal.fromTemplateUrl('my-modal.html', {
 
 .controller('myCtrl', function($scope, bestAppsApi) {
   $scope.apps = bestAppsApi.getApps();
+  $scope.mySelect = 5;
 
   $scope.checkSubCategory = function(subCatSelect, subCategory) {
 console.log(subCatSelect + " " + subCategory);

@@ -93,4 +93,5 @@ angular.module('starter', ['ionic', 'ngRoute', 'starter.controllers', 'starter.s
     });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
+
 });
