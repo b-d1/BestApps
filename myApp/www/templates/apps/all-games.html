@@ -1,21 +1,47 @@
 <ion-view view-title="Games">
-  <ion-content style="background-color:" ng-controller="myCtrl">
+  <ion-content ng-controller="myCtrl">
     <div class="list">
+<label class="item item-input item-select">
+    <div class="input-label">
+      Games category
+    </div>
+   <select ng-model="subCat" ng-init="subCat='All'">
+     <option value="All" ng-selected="true">All</option>
+      <option value="Action">Action</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Arcade">Arcade</option>
+      <option value="Arcade & Action">Arcade & Action</option>
+      <option value="Board">Board</option>
+      <option value="Brain & Puzzle">Brain & Puzzle</option>
+      <option value="Card">Card</option>
+      <option value="Cards & Casino">Cards & Casino</option>
+      <option value="Casino">Casino</option>
+      <option value="Casual">Casual</option>
+      <option value="Educational">Educational</option>
+       <option value="Family">Family</option>
+      <option value="Music">Music</option>
+      <option value="Puzzle">Puzzle</option>
+      <option value="Racing">Racing</option>
+      <option value="Role Playing">Role Playing</option>
+      <option value="Simulation">Simulation</option>
+      <option value="Sports">Sports</option>
+      <option value="Strategy">Strategy</option>
+      <option value="Trivia">Trivia</option>
+      <option value="Word">Word</option>
+    </select>
+  </label>
+
       <script>var name={{title}}</script>
-            <span ng-repeat="task in apps | filter:{ category: 'Games' }">
-    <a class="item item-avatar item-icon-right" href="#/app/apps/{{task.id}}">
+            <span ng-repeat="app in apps | filter:{ mainCategory: 'Games' }"  ng-if="checkSubCategory(subCat, app.subCategory)">
+    <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
    
-      <img src= {{task.avatar}}>
-      <h2><b>{{task.title}}</b>
+      <img src= "{{app.avatar}}">
+      <h2><b>{{app.title}}</b>
       <i class="icon ion-chevron-right icon-accessory"></i></h2>
-      <p>Category:  <b>{{task.category}}</b></p>
-      <p>Downloads:   <b>{{task.downloads}}k</b></p>
-      <p>Rating:    <b>   <span style="color:orange; font-size:18px">{{task.stars}}<span></b></p>
+      <p>Category:  <b>{{app.subCategory}}</b></p>
+      <p>Downloads:   <b>{{app.downloads}}k</b></p>
+      <p>Rating:    <b>   <span class="rating-stars">{{app.stars}}<span></b></p>
     </a>
 </span>
     </div>
-  <ion-content>
-    <h1>Games</h1>
-    <a href="#/app/apps/21" class="button button-positive">View app</a>
-  </ion-content>
 </ion-view>

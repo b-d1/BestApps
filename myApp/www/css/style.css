@@ -1,4 +1,4 @@
-/* Empty. Add your own CSS if you like */
+ /*Empty. Add your own CSS if you like */
 .img-center {
         display: block;
     margin-left: auto;
@@ -7,6 +7,14 @@
 
 .text-center {
     text-align:center;
+}
+a:hover, a:active {
+    text-decoration: none !important;
+}
+
+.row {
+    margin-left:0 !important;
+    margin-right:0 !important;
 }
 
 /* ====== Single App styles ====== */
@@ -53,6 +61,8 @@
 
 .app-properties {
     color: #2c8aff;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .app-rating {
@@ -71,6 +81,33 @@
 
 /* ====== /Single App styles ====== */
 
+/* ======  Apps list styles ====== */
+.rating-stars {
+color:orange; font-size:18px;
+}
+/* ====== /Apps list styles ====== */
+
+
+/* ======  Modal ====== */
+.more-info-properties {
+text-transform: uppercase;
+color: #2c8aff;
+font-weight:700;
+}
+
+.card-header-custom {
+        padding-left: 45px !important;
+}
+.card-header-custom i {
+        font-size: 28px;
+}
+.button-header-custom {
+    background:transparent;
+    border:none;
+    color: #4f4f4f;
+    line-height: 0;
+}
+/* ======  /Apps list styles ====== */
 
 
 .custom-row
@@ -101,4 +138,4 @@
 /* start commented backslash hack \*/
 * html .clearfixc { height: 1%; }
 .clearfixc { display: block; }
-/* close commented backslash hack */
+ close commented backslash hack */
