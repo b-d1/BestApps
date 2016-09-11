@@ -139,3 +139,7 @@ font-weight:700;
 * html .clearfixc { height: 1%; }
 .clearfixc { display: block; }
 /* close commented backslash hack */
+.scroll-view.scroll-x
+{
+  overflow: hidden;
+}
