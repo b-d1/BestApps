@@ -32,7 +32,7 @@
   </label>
 
       <script>var name={{title}}</script>
-            <span ng-repeat="app in apps | filter:{ mainCategory: 'Games' }"  ng-if="checkSubCategory(subCat, app.subCategory)">
+            <span ng-repeat="app in apps | filter:{ subCategory: 'Games' }" >
     <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
    
       <img src= "{{app.avatar}}">

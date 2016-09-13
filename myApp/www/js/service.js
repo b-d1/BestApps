@@ -14,7 +14,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
      appMetaData: {releasedBy: "Snapchat", requires: "Varies with Device", lastUpdate: "August 5, 2016", 
                     description: "Snapchat lets you easily talk with friends, view Live Stories from around the world, and explore news in Discover. Life's more fun when you live in the moment! "}
     },
-    { id: 3, title: 'PokémonGo' , mainCategory: 'Apps',  subCategory: 'Games', avatar: 'img/pokemongo.png', downloads: 10, rating: '5', stars:"✮ ✮ ✮ ✮ ✮",
+    { id: 3, title: 'PokémonGo' , mainCategory: 'Apps',  subCategory: 'Games', avatar: 'img/pokemongo.png', downloads: 10, rating: '4.6', stars:"✮ ✮ ✮ ✮ ✮",
      bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 9.5,
                     uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 8.2, 
                     overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
@@ -112,7 +112,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
      appMetaData: {releasedBy: "Amazon", requires: "Varies with Device", lastUpdate: "September 1, 2016", 
                     description: "Дознајте каде е наредната свирка и кога излегува нова песна од вашиот омилен бенд." }
     },
-    { id: 17, title: 'YouTube' , mainCategory: 'Apps', subCategory: 'Music & Audio',  avatar: 'img/youtube.png', downloads: 150, rating:'4.9', stars:"✮ ✮ ✮ ✮ ✮",
+    { id: 17, title: 'YouTube' , mainCategory: 'Apps', subCategory: 'Music & Audio',  avatar: 'img/youtube.png', downloads: 150, rating:'5  ', stars:"✮ ✮ ✮ ✮ ✮",
      bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 8.5,
                     uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 7.9, 
                     overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
@@ -168,7 +168,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
      appMetaData: {releasedBy: "Bs", requires: "Varies with Device", lastUpdate: "September 1, 2016", 
                     description: "Top business plan app with 500,000+ downloads and over 50,000+ people who already created their business plans on this app." }
     },
-    { id: 25, title: 'Bible' , mainCategory: 'Apps', subCategory: 'Books & Reference',  avatar: 'img/ebible.png', downloads: 60, rating:'4.9', stars:"✮ ✮ ✮ ✮ ✮",
+    { id: 25, title: 'Bible' , mainCategory: 'Apps', subCategory: 'Books & Reference',  avatar: 'img/ebible.png', downloads: 130, rating:'4.9', stars:"✮ ✮ ✮ ✮ ✮",
      bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 8.5,
                     uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 7.9, 
                     overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
@@ -196,21 +196,34 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
      appMetaData: {releasedBy: "DC", requires: "Varies with Device", lastUpdate: "September 1, 2016", 
                     description: "DC Entertainment is one of the largest English-language publishers of comics in the world, featuring a wide variety of characters and genres. Renowned for the World's Greatest Super Heroes - Superman, Batman, Wonder Woman, Green Lantern, The Flash and many many more - DC has thrilled readers " }
     },
-    { id: 29, title: 'LATAM Entertainment' , mainCategory: 'Apps', subCategory: 'Entertainment',  avatar: 'img/latam.png', downloads: 60, rating:'4.9', stars:"✮ ✮ ✮ ✮ ✮",
+    { id: 29, title: 'LATAM Entertainment' , mainCategory: 'Apps', subCategory: 'Entertainment',  avatar: 'img/latam.png', downloads: 80, rating:'4.6', stars:"✮ ✮ ✮ ✮ ✮",
      bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 8.5,
                     uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 7.9, 
                     overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
-     appMetaData: {releasedBy: "LATAM", requires: "Varies with Device", lastUpdate: "September 1, 2016", 
+     appMetaData: {releasedBy: "LATAM", requires: "Varies with Device", lastUpdate: "September 5, 2016", 
                     description: "Experience the in-flight entertainment app on board of LATAM flights, now from your own device. Download the LATAM Entertainment app and enjoy a selection of recently released movies, popular TV shows, acclaimed boxsets, special content for kids and an interactive flight map." }
     },
-    { id: 30, title: 'Google Fit - Fitness Tracking' , mainCategory: 'Apps', subCategory: 'Health & Fitness',  avatar: 'img/googlefit.png', downloads: 60, rating:'4.9', stars:"✮ ✮ ✮ ✮ ✮",
+    { id: 30, title: 'Google Fit - Fitness Tracking' , mainCategory: 'Apps', subCategory: 'Health & Fitness',  avatar: 'img/googlefit.png', downloads: 60, rating:'4.4', stars:"✮ ✮ ✮ ✮ ✮",
      bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 8.5,
                     uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 7.9, 
                     overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
-     appMetaData: {releasedBy: "Be Fit", requires: "Varies with Device", lastUpdate: "September 1, 2016", 
+     appMetaData: {releasedBy: "Be Fit", requires: "Varies with Device", lastUpdate: "September 4, 2016", 
                     description: "Effortlessly track any activity. As you walk, run, or cycle throughout the day, your phone or Android Wear watch automatically logs them with Google Fit." }
     },
-    
+    { id: 31, title: '10 Daily Exercises' , mainCategory: 'Apps', subCategory: 'Health & Fitness',  avatar: 'img/10dailyexercises.png', downloads: 70, rating:'4.2', stars:"✮ ✮ ✮ ✮ ✮",
+     bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 8.5,
+                    uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 7.9, 
+                    overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
+     appMetaData: {releasedBy: "Be Fit", requires: "Varies with Device", lastUpdate: "September 2, 2016", 
+                    description: "This app helps you to exercise daily. The app contains the ten most common exercises everyone can do. Doing the workout will make you feel stronger, healthier, improve energy and control weight." }
+    },
+    { id: 32, title: 'Material Library Demo' , mainCategory: 'Apps', subCategory: 'Libraries & Demo',  avatar: 'img/materiallibrarydemo.png', downloads: 70, rating:'4.2', stars:"✮ ✮ ✮ ✮ ✮",
+     bestAppsInfo: {usabilityDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", usabilityRating: 8.5,
+                    uxDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ", uxRating: 7.9, 
+                    overallDesc: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. "},
+     appMetaData: {releasedBy: "Material Library Demo", requires: "Varies with Device", lastUpdate: "September 2, 2016", 
+                    description: "This app helps you to exercise daily. The app contains the ten most common exercises everyone can do. Doing the workout will make you feel stronger, healthier, improve energy and control weight." }
+    }
 
   ];
  // $state.mySelect=5;

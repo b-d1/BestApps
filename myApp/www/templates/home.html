@@ -1,72 +1,136 @@
-<ion-view view-title="Best Apps" style="background: #111111;">
+<ion-view view-title="Best Apps">
   <ion-content class="has-header" ng-controller="myCtrl" style="background-color: white">
 
-    <div class="container-fluid" style="margin:0 30px;">
-      <div class="custom-row">
-        <label class="item item-input">
+
+    <div class="list list-inset" style="margin-top:2%">
+      <label class="item item-input ">
           <i class="icon ion-search placeholder-icon"></i>
-          <input type="search" placeholder="Search">
-        </label>
-      </div>
-      <div class="custom-row" style="background-color: rgb(219, 222, 230);height: 100%;border: 4px solid black;">
-      <div class="custom-row" >
-        <div class="col-40 inline">
-          <h2 class="text-left" style="color: black;"><i class="ion-arrow-graph-up-right"></i>Top Rated</h2>
-        </div>
-        <div class="col-40 pull-right inline">
-          <h3 class="text-right" style="color: black;">More</h3>
-        </div>
-      </div>
-      <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:275px;overflow-y: hidden;white-space: nowrap">
-        <div class="padding-left inline " style="width: 150px;height: 230px;margin: 5px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-rating' | limitTo: 15">
-          <div class="list card" style="width: 100%;height: 100%;border: 2px solid black;float: left">
-            <div class="item" style="position: relative;height: 100%;width: 100%;">
-              <div style="position: absolute;top: 10px;left: 0px;width: 100%;">
-              <div class="item-image full-image rounded img-center">
-                <img src="{{task.avatar}}" style="max-width: 100px">
-              </div>
-              <div class="text-center" style="padding-top: 10px;">
-                <h3 style="white-space: normal">{{task.title}}</h3>
-              </div>
-              </div>
-              <div style="position: absolute;top: 163px;left: 0px;">
-              <p style="white-space: normal">Category:<b class="ng-binding" >{{task.subCategory}}</b></p>
-
-              <p>Rating:<b class="ng-binding">{{task.rating}}</b> </p>
-              <a href="#" style="text-underline: none;text-underline-style: none"><i class="ion-android-download" style="text-underline-style: none">Download</i> </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        </ion-scroll>
-      </div>
-      <div class="custom-row" style="background-color: rgb(219, 222, 230);height: 100%;border: 4px solid black;">
-        <div class="custom-row" >
-          <div class="col-40 inline">
-            <h2 class="text-left" style="color: black;"><i class="ion-arrow-graph-up-right"></i>Top Rated</h2>
-          </div>
-          <div class="col-40 pull-right inline">
-            <h3 class="text-right" style="color: black;">More</h3>
-          </div>
-        </div>
-        <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:275px;overflow-y: hidden;white-space: nowrap">
-          <div class="padding-left inline " style="width: 150px;height: 230px;margin: 5px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-downloads' | limitTo: 15">
-            <div class="list card" style="width: 100%;height: 100%;border: 2px solid black;background-color: rgb(215, 215, 215);float: left">
-              <div class="item item-body" style="background-color: rgb(215, 215, 215);">
-                <img class="full-image img-center rounded" src={{task.avatar}} style="width: 40px;height: 40px">
-                <h3 class="text-center">{{task.title}}</h3>
-                <i class="ion-android-download">Download</i>
-                <br>
-                <i class="ion-star">Add to favorite</i>
-              </div>
-            </div>
-          </div>
-        </ion-scroll>
-      </div>
-
-
+          <input type="text" placeholder="Search">
+       </label>
     </div>
+
+    <!-- pocnuva tuka -->
+    <div class="custom-row" style="height: 270px; margin-top:5%;background-color: #f9f9f9;">
+      <div class="row">
+        <div class="col col-75">
+          <h4>Top rated</h4>
+        </div>
+        <div class="col col-25" style="text-align:right;">
+          <h5><a href="#/app/top-rated">More</a></h5>
+        </div>
+      </div>
+      <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:235px;overflow-y: hidden;  margin-top:-8%;white-space: nowrap">
+        <div class="padding-left inline " style="width: 140px;height: 230px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-rating' | limitTo: 15">
+          <a href="#/app/apps/{{app.id}}">
+            <div class="card" style="width: 90%;height: 80%; float: left">
+              <div class="item" style="position: relative;height: 100%;">
+                <div style="position: absolute;top: 10px;left: 0px;">
+                  <div class="item-image img-rounded img-center">
+                    <img src="{{task.avatar}}" style="max-width: 50%">
+                  </div>
+                  <div class="text-center">
+                    <h3 style="white-space: normal">{{task.title}}</h3>
+                  </div>
+                </div>
+
+                <div style="position: absolute;top: 50%;left: 0px; padding-left: 5%; ">
+                  <div class="row">
+                    <hr class="rainbow" style="width:70%; color: gray; height:1px;" />
+                  </div>
+                  <i class="ion-android-download">Download</i>
+                  <br>
+                  <i class="ion-star">Add to favorite</i>
+                </div>
+              </div>
+            </div>
+        </div>
+        </a>
+    </div>
+    </ion-scroll>
+    <!-- zavruva tuka -->
+
+    <!-- pocnuva tuka -->
+    <div class="custom-row" style="height: 270px; margin-top:5%;background-color: #f9f9f9;">
+      <div class="row">
+        <div class="col col-75">
+          <h4>Top downloaded</h4>
+        </div>
+        <div class="col col-25" style="text-align:right;">
+          <h5><a href="#/app/top-rated">More</a></h5>
+        </div>
+      </div>
+      <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:235px;overflow-y: hidden;  margin-top:-8%;white-space: nowrap">
+        <div class="padding-left inline " style="width: 140px;height: 230px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-downloads' | limitTo: 15">
+          <a href="#/app/apps/{{app.id}}">
+            <div class="card" style="width: 90%;height: 80%; float: left">
+              <div class="item" style="position: relative;height: 100%;">
+                <div style="position: absolute;top: 10px;left: 0px;">
+                  <div class="item-image img-rounded img-center">
+                    <img src="{{task.avatar}}" style="max-width: 50%">
+                  </div>
+                  <div class="text-center">
+                    <h3 style="white-space: normal">{{task.title}}</h3>
+                  </div>
+                </div>
+
+                <div style="position: absolute;top: 50%;left: 0px; padding-left: 5%; ">
+                  <div class="row">
+                    <hr class="rainbow" style="width:70%; color: gray; height:1px;" />
+                  </div>
+                  <i class="ion-android-download">Download</i>
+                  <br>
+                  <i class="ion-star">Add to favorite</i>
+                </div>
+              </div>
+            </div>
+        </div>
+        </a>
+    </div>
+    </ion-scroll>
+    <!-- zavruva tuka -->
+
+    <!-- pocnuva tuka -->
+    <div class="custom-row" style="height: 270px; margin-top:5%;background-color: #f9f9f9;">
+      <div class="row">
+        <div class="col col-75">
+          <h4>Games</h4>
+        </div>
+        <div class="col col-25" style="text-align:right;">
+          <h5><a href="#/app/top-rated">More</a></h5>
+        </div>
+      </div>
+      <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:235px;overflow-y: hidden;  margin-top:-8%;white-space: nowrap">
+        <div class="padding-left inline " style="width: 140px;height: 230px;vertical-align: middle;" ng-repeat="task in apps | filter:{ subCategory: 'Games' } | limitTo: 15">
+          <a href="#/app/apps/{{app.id}}">
+            <div class="card" style="width: 90%;height: 80%; float: left">
+              <div class="item" style="position: relative;height: 100%;">
+                <div style="position: absolute;top: 10px;left: 0px;">
+                  <div class="item-image img-rounded img-center">
+                    <img src="{{task.avatar}}" style="max-width: 50%">
+                  </div>
+                  <div class="text-center">
+                    <h3 style="white-space: normal">{{task.title}}</h3>
+                  </div>
+                </div>
+
+                <div style="position: absolute;top: 50%;left: 0px; padding-left: 5%; ">
+                  <div class="row">
+                    <hr class="rainbow" style="width:70%; color: gray; height:1px;" />
+                  </div>
+                  <i class="ion-android-download">Download</i>
+                  <br>
+                  <i class="ion-star">Add to favorite</i>
+                </div>
+              </div>
+            </div>
+        </div>
+        </a>
+    </div>
+    </ion-scroll>
+    <!-- zavruva tuka -->
+
+
+
 
   </ion-content>
 </ion-view>
