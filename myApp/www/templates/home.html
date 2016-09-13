@@ -2,15 +2,16 @@
   <ion-content class="has-header" ng-controller="myCtrl" style="background-color: white">
 
 
-    <div class="list list-inset" style="margin-top:2%">
+  <!--  <div class="list list-inset" style="margin-top:2%">
       <label class="item item-input ">
           <i class="icon ion-search placeholder-icon"></i>
           <input type="text" placeholder="Search">
        </label>
     </div>
+    -->
 
     <!-- pocnuva tuka -->
-    <div class="custom-row" style="height: 270px; margin-top:5%;background-color: #f9f9f9;">
+    <div class="custom-row" style="height: 270px; margin-top:0%;background-color: #f9f9f9;">
       <div class="row">
         <div class="col col-75">
           <h4>Top rated</h4>
@@ -21,7 +22,7 @@
       </div>
       <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:235px;overflow-y: hidden;  margin-top:-8%;white-space: nowrap">
         <div class="padding-left inline " style="width: 140px;height: 230px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-rating' | limitTo: 15">
-          <a href="#/app/apps/{{app.id}}">
+          <a href="#/app/apps/{{task.id}}">
             <div class="card" style="width: 90%;height: 80%; float: left">
               <div class="item" style="position: relative;height: 100%;">
                 <div style="position: absolute;top: 10px;left: 0px;">
@@ -43,14 +44,13 @@
                 </div>
               </div>
             </div>
-        </div>
         </a>
     </div>
     </ion-scroll>
     <!-- zavruva tuka -->
 
     <!-- pocnuva tuka -->
-    <div class="custom-row" style="height: 270px; margin-top:5%;background-color: #f9f9f9;">
+       <div class="custom-row" style="height: 270px; margin-top:3%;background-color: #f9f9f9;">
       <div class="row">
         <div class="col col-75">
           <h4>Top downloaded</h4>
@@ -61,7 +61,7 @@
       </div>
       <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:235px;overflow-y: hidden;  margin-top:-8%;white-space: nowrap">
         <div class="padding-left inline " style="width: 140px;height: 230px;vertical-align: middle;" ng-repeat="task in apps | orderBy:'-downloads' | limitTo: 15">
-          <a href="#/app/apps/{{app.id}}">
+          <a href="#/app/apps/{{task.id}}">
             <div class="card" style="width: 90%;height: 80%; float: left">
               <div class="item" style="position: relative;height: 100%;">
                 <div style="position: absolute;top: 10px;left: 0px;">
@@ -83,14 +83,13 @@
                 </div>
               </div>
             </div>
-        </div>
         </a>
     </div>
     </ion-scroll>
     <!-- zavruva tuka -->
 
     <!-- pocnuva tuka -->
-    <div class="custom-row" style="height: 270px; margin-top:5%;background-color: #f9f9f9;">
+    <div class="custom-row" style="height: 270px; margin-top:3%;background-color: #f9f9f9;">
       <div class="row">
         <div class="col col-75">
           <h4>Games</h4>
@@ -101,7 +100,7 @@
       </div>
       <ion-scroll scrollbar-y="false" direction="x" class="custom-row" style="height:235px;overflow-y: hidden;  margin-top:-8%;white-space: nowrap">
         <div class="padding-left inline " style="width: 140px;height: 230px;vertical-align: middle;" ng-repeat="task in apps | filter:{ subCategory: 'Games' } | limitTo: 15">
-          <a href="#/app/apps/{{app.id}}">
+          <a href="#/app/apps/{{task.id}}">
             <div class="card" style="width: 90%;height: 80%; float: left">
               <div class="item" style="position: relative;height: 100%;">
                 <div style="position: absolute;top: 10px;left: 0px;">
@@ -115,7 +114,7 @@
 
                 <div style="position: absolute;top: 50%;left: 0px; padding-left: 5%; ">
                   <div class="row">
-                    <hr class="rainbow" style="width:70%; color: gray; height:1px;" />
+                    <hr class="rainbow" style="width:70%;  height:1px;" />
                   </div>
                   <i class="ion-android-download">Download</i>
                   <br>
@@ -123,7 +122,6 @@
                 </div>
               </div>
             </div>
-        </div>
         </a>
     </div>
     </ion-scroll>
