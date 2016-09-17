@@ -14,7 +14,7 @@ We have created BestApps using [Ionic Framework 1.3.1](http://ionicframework.com
 
 BestApps is still not released for any mobile app platform, but you can test it on Ionic View (you need to send us an e-mail, so we can share the app with you), or on your non-mobile device by installing ionic, and using the following command to run it:
 ```sh
-$ ionic serve -lab
+$ ionic serve --lab
 ```
 
 ### Photos
