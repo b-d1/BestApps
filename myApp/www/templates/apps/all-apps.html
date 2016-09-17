@@ -35,7 +35,7 @@
   </label>
       
 
-      <span ng-repeat="app in apps | filter:{ mainCategory: 'Apps', subCategory: '!'+'Games', title: obj.query }" ng-if="checkSubCategory(subCat, app.subCategory)">
+      <span ng-repeat="app in apps | filter:{ mainCategory: 'Apps', subCategory: '!'+'Games', title: obj.query } | orderBy:'-rating'" ng-if="checkSubCategory(subCat, app.subCategory)">
     <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
    
       <img src= "{{app.avatar}}">
