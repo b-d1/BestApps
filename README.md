@@ -2,7 +2,7 @@
 
 ### Description
 
-BestApps is a prototype for a mobile application for app-recomendation, similar to AppsZoom (for Android). The core functionalities of the mobile apps are:
+BestApps is a prototype for a mobile application for app-recommendation, similar to AppsZoom (for Android). The core functionalities of the mobile apps are:
 
 - Displaying user ratings, downloads, and other public information about the give mobile app.
 - Displaying BestApps ratings, and app reviews, based on two criterias: usability, user experience and also, an overall rating about the app is given. (Ratings and reviews will be added by BestApps team, or by members selected from BestApps team).
