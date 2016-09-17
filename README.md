@@ -18,17 +18,15 @@ $ ionic serve -lab
 ```
 
 ### Photos
-<img src='https://s14.postimg.org/sf9e1kf7h/14339887_10207301918201539_683005312_o.jpg' width="250">
-![Image 1](https://s14.postimg.org/eycfip4w1/14339887_10207301918201539_683005312_o.jpg)
-![Image 2](https://s14.postimg.org/kb19wtssh/14360470_10207301916921507_961633163_o.jpg)
-![Image 3](https://s14.postimg.org/mtmyxieip/14374627_10207301916761503_743366266_o.jpg)
-![Image 4](https://s14.postimg.org/b5sx2ypdt/14375198_10207301917401519_726135309_o.jpg)
-![Image 5](https://s14.postimg.org/gv95n9vk1/14393849_10207301916401494_1853169389_o.jpg)
-![Image 6](https://s14.postimg.org/9gjtuw9oh/14393900_10207301916241490_1325749025_o.jpg)
-![Image 7](https://s14.postimg.org/szof498g1/14394036_10207301921881631_1997450458_o.jpg)
-![Image 8](https://s14.postimg.org/bno2iteyp/14408124_10207301917201514_1824636200_o.jpg)
-![Image 9](https://s14.postimg.org/azf7zvg8x/14408214_10207301917081511_517070167_o.jpg)
-![Image 10](https://s14.postimg.org/q9jokt14x/14408299_10207301917801529_493086498_o.jpg)
+<img src='https://s14.postimg.org/eycfip4w1/14339887_10207301918201539_683005312_o.jpg' width="250">
+<img src='https://s14.postimg.org/kb19wtssh/14360470_10207301916921507_961633163_o.jpg' width="250">
+<img src='https://s14.postimg.org/mtmyxieip/14374627_10207301916761503_743366266_o.jpg' width="250">
+<img src='https://s14.postimg.org/b5sx2ypdt/14375198_10207301917401519_726135309_o.jpg' width="250">
+<img src='https://s14.postimg.org/gv95n9vk1/14393849_10207301916401494_1853169389_o.jpg' width="250">
+<img src='https://s14.postimg.org/9gjtuw9oh/14393900_10207301916241490_1325749025_o.jpg' width="250">
+<img src='https://s14.postimg.org/szof498g1/14394036_10207301921881631_1997450458_o.jpg' width="250">
+<img src='https://s14.postimg.org/bno2iteyp/14408124_10207301917201514_1824636200_o.jpg' width="250">
+<img src='https://s14.postimg.org/q9jokt14x/14408299_10207301917801529_493086498_o.jpg' width="250">
 
 ### Credits
 
