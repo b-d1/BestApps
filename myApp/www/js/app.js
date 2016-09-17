@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ngRoute', 'starter.controllers', 'starter.service'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $ionicHistory) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'ngRoute', 'starter.controllers', 'starter.s
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'myCtrl'
   })
 
   .state('app.all-apps', {
@@ -70,7 +70,6 @@ angular.module('starter', ['ionic', 'ngRoute', 'starter.controllers', 'starter.s
       views: {
         'menuContent': {
           templateUrl: 'templates/apps/all-games.html'
-          // controller: 'AppsCtl'
         }
       }
     })
@@ -83,11 +82,11 @@ angular.module('starter', ['ionic', 'ngRoute', 'starter.controllers', 'starter.s
       }
     }
   })
-    .state('app.guide', {
-      url: '/guide',
+    .state('app.about', {
+      url: '/about',
       views: {
         'menuContent': {
-          templateUrl: 'templates/guide.html'
+          templateUrl: 'templates/about.html'
         }
       }
     });

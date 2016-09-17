@@ -1,40 +1,38 @@
 <ion-view view-title="Top Downloaded">
-    <ion-content ng-controller="myCtrl">
-      <div class="list">
-        <label class="item item-input item-select">
-    <div class="input-label">
-      Number of apps
-    </div>
-    <select ng-model="numberOfApps" ng-init="numberOfApps='10'">
-      <option value="5">5</option>
-      <option value="10" ng-selected="true">10</option>
-      <option value="25">25</option>
-      <option value="50">50</option>
-    </select>
-  </label>
-      <script>var name={{title}}</script>
-               <span ng-repeat="app in apps | orderBy:'-downloads' | limitTo: numberOfApps">
-    <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
-  
-     <img src= "{{app.avatar}}">
-      <h2><b>{{app.title}}</b>
-     <i class="icon ion-chevron-right icon-accessory"></i></h2>
-    <p>Category:  <b>{{app.subCategory}}</b></p>
-     <p>Downloads:   <b>{{app.downloads}}k</b></p>
-     <p>Rating:    <b>    <span class="rating-stars">{{app.stars}}<span></b></p>
-      
-       </a>
-       </span>
+<ion-content ng-controller="myCtrl">
 
-
-
-
-      </div>
-    </ion-content>
-
-
-
-
-
-
+  <div class="bar bar-header item-input-inset bar-dark" ng-if="showH === true">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Search" ng-model="obj.query">
+    </label>
+    <a class="clear" ng-click="obj.query = ''">
+      <button class="button button-clear icon ion-close"></button>
+    </a>
+  </div>
+  <div class="list">
+    <label class="item item-input item-select">
+        <div class="input-label">
+          Number of apps
+        </div>
+        <select ng-model="numberOfApps" ng-init="numberOfApps='10'">
+          <option value="5">5</option>
+          <option value="10" ng-selected="true">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+      </label>
+    <script>var name={{title}}</script>
+    <span ng-repeat="app in apps | orderBy:'-downloads' | filter:{ title: obj.query } |  limitTo: numberOfApps">
+      <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
+          <img src="{{app.avatar}}">
+          <h2><b>{{app.title}}</b>
+            <i class="icon ion-chevron-right icon-accessory"></i></h2>
+          <p>Category: <b>{{app.subCategory}}</b></p>
+          <p>Downloads: <b>{{app.downloads}}k</b></p>
+          <p>Rating: <b><span class="rating-stars">{{app.stars}}<span></b></p>
+        </a>
+      </span>
+  </div>
+</ion-content>
 </ion-view>

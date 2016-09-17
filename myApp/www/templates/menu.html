@@ -9,9 +9,11 @@
         </button>
       </ion-nav-buttons>
  <ion-nav-buttons side="right">
-      <button class="button button-icon button-clear ion-search" ui-sref="app.home" >
+   <div ng-if="showSearch2()">
+      <button class="button button-icon button-clear ion-search" ng-click="showHeader()" >
       </button>
-      </ion-nav-buttons>
+      </div>
+  </ion-nav-buttons>
   
 
     </ion-nav-bar>
@@ -20,7 +22,7 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-dark">
-      <h1 class="title">Menu</h1> <!-- Menu test -->
+      <h1 class="title">Menu</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
@@ -39,8 +41,8 @@
          <ion-item menu-close href="#/app/all-games" class="item-icon-left">
           <i class="icon ion-ios-game-controller-b"></i> All Games
         </ion-item>
-        <ion-item menu-close href="#/app/guide" class="item-icon-left">
-          <i class="icon ion-ios-book-outline"></i> Guide
+        <ion-item menu-close href="#/app/about" class="item-icon-left">
+          <i class="icon ion-ios-information-outline"></i> About
         </ion-item>
 
       </ion-list>

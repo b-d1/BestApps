@@ -1,5 +1,16 @@
 <ion-view view-title="Games">
   <ion-content ng-controller="myCtrl">
+
+<div class="bar bar-header item-input-inset bar-dark" ng-if="showH === true" >
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon"></i>
+    <input type="search" placeholder="Search" ng-model="obj.query">
+  </label>
+  <a class="clear" ng-click="obj.query = ''">
+    <button class="button button-clear icon ion-close"></button>
+  </a>
+</div>
+
     <div class="list">
 <label class="item item-input item-select">
     <div class="input-label">
@@ -10,35 +21,23 @@
       <option value="Action">Action</option>
       <option value="Adventure">Adventure</option>
       <option value="Arcade">Arcade</option>
-      <option value="Arcade & Action">Arcade & Action</option>
       <option value="Board">Board</option>
       <option value="Brain & Puzzle">Brain & Puzzle</option>
-      <option value="Card">Card</option>
-      <option value="Cards & Casino">Cards & Casino</option>
       <option value="Casino">Casino</option>
       <option value="Casual">Casual</option>
-      <option value="Educational">Educational</option>
-       <option value="Family">Family</option>
-      <option value="Music">Music</option>
-      <option value="Puzzle">Puzzle</option>
       <option value="Racing">Racing</option>
-      <option value="Role Playing">Role Playing</option>
-      <option value="Simulation">Simulation</option>
-      <option value="Sports">Sports</option>
       <option value="Strategy">Strategy</option>
-      <option value="Trivia">Trivia</option>
       <option value="Word">Word</option>
     </select>
   </label>
 
-      <script>var name={{title}}</script>
-            <span ng-repeat="app in apps | filter:{ subCategory: 'Games' }" >
+      <span ng-repeat="app in apps | filter:{ subCategory: 'Games', title: obj.query }" ng-if="checkSubCategory(subCat, app.gameSubCategory)">
     <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
    
       <img src= "{{app.avatar}}">
       <h2><b>{{app.title}}</b>
       <i class="icon ion-chevron-right icon-accessory"></i></h2>
-      <p>Category:  <b>{{app.subCategory}}</b></p>
+      <p>Category:  <b>{{app.gameSubCategory}}</b></p>
       <p>Downloads:   <b>{{app.downloads}}k</b></p>
       <p>Rating:    <b>   <span class="rating-stars">{{app.stars}}<span></b></p>
     </a>

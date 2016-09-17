@@ -86,6 +86,65 @@ a:hover, a:active {
 
 /* ====== /Single App styles ====== */
 
+
+/* ====== Home ====== */
+
+.welcome-header {
+    text-align:center;
+}
+
+.welcome-header p {
+    padding:0px 10px;
+}
+
+
+.apps-home-container {
+    width: 140px;
+    height: 250px;
+    vertical-align: middle;
+}
+
+.home-card {
+    width: 90%;
+    height: 80%;
+    float: left;
+}
+
+.home-item {
+    position: relative;
+    height: 100%;
+}
+
+
+
+.home-app-rating {
+color: orange;
+}
+
+.home-app-title {
+    white-space: normal;
+    margin-top:10px !important;
+}
+
+.scrollbar-container {
+    background-color: #f7f7f7;
+    margin-top:25px !important;
+}
+
+.home-scrollbar {
+    height:235px;
+    overflow-y: hidden;
+      margin-top:-8%;
+      white-space: nowrap;
+}
+
+.home-app-more {
+    text-align:right;
+}
+
+
+/* ====== /Home ====== */
+
 /* ======  Apps list styles ====== */
 .rating-stars {
 color:orange; font-size:18px;
@@ -109,13 +168,36 @@ font-weight:700;
 .button-header-custom {
     background:transparent;
     border:none;
-    color: #4f4f4f;
+    color: #ffffff;
     line-height: 0;
 }
 
 
 
 /* ======  /Apps list styles ====== */
+
+/* ======  About ====== */
+
+
+.about-img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.h3-about {
+    white-space: normal !important;
+    font-weight:400;
+    font-size:15px !important;
+}
+.h3-about span {
+    font-weight:700 !important;
+}
+
+.no-margin-top {
+    margin-top:0;
+}
+
+/* ======  /About ====== */
 
 
 .custom-row
@@ -162,23 +244,6 @@ a
 
 
 /* hr line*/
-
-.rainbow{
-  width:200px;
-  height:20px;
-  background: -webkit-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet);
-  background: -moz-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
-  background: -o-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
-  background: -ms-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
-  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
-  background-repeat:repeat-x;
-  
-  -webkit-animation:go 1s linear infinite;
-  -moz-animation:go 1s linear infinite;
-  -o-animation:go 1s linear infinite;
-  -ms-animation:go 1s linear infinite;
-  animation:go 1s linear infinite;
-}
 
 @-webkit-keyframes go{
   0%{background-position:0;}

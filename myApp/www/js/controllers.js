@@ -1,102 +1,82 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+  .controller('singleAppCtl', function ($scope, $stateParams, $ionicModal, bestAppsApi) {
+    var vm = this;
+    var id = $stateParams.id;
+    $scope.app = bestAppsApi.getApp(id);
+    $scope.addColor = function (rating) {
+      if (rating >= 6) {
+        return "rt-good";
+      }
+      else if (rating >= 3 && rating < 6) {
+        return "";
+      }
+      else {
+        return "rt-bad";
+      }
+    }
 
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+    $scope.openPage = function (page) {
+      try {
+        window.open(page, '_system');
+      } catch (err) {
+        alert(err);
+      }
+    }
 
-  // Form data for the login modal\
-  
-  $scope.loginData = {};
-  
-  // $scope.loginData = {};
 
-  // // Create the login modal that we will use later
-  // $ionicModal.fromTemplateUrl('templates/login.html', {
-  //   scope: $scope
-  // }).then(function(modal) {
-  //   $scope.modal = modal;
-  // });
+    $ionicModal.fromTemplateUrl('my-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function (modal) {
+      $scope.modal = modal;
+    });
+    $scope.openModal = function () {
+      $scope.modal.show();
+    };
+    $scope.closeModal = function () {
+      $scope.modal.hide();
+    };
+    // Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function () {
+      $scope.modal.remove();
+    });
+    $scope.overallRating = function (usabityRating, uxRating) {
+      var num = (usabityRating + uxRating) / 2;
+      return num.toFixed(1);
+    }
+  })
 
-  // // Triggered in the login modal to close it
-  // $scope.closeLogin = function() {
-  //   $scope.modal.hide();
-  // };
-
-  // // Open the login modal
-  // $scope.login = function() {
-  //   $scope.modal.show();
-  // };
-
-  // // Perform the login action when the user submits the login form
-  // $scope.doLogin = function() {
-  //   console.log('Doing login', $scope.loginData);
-
-  //   // Simulate a login delay. Remove this and replace with your login
-  //   // code if using a login system
-  //   $timeout(function() {
-  //     $scope.closeLogin();
-  //   }, 1000);
-  // };
-})
-
-.controller('singleAppCtl', function($scope, $stateParams, $ionicModal, bestAppsApi) {
-var vm = this;
-var id = $stateParams.id;
-$scope.app = bestAppsApi.getApp(id);
-
-$scope.addColor = function(rating) {
-
-if(rating >= 6) {
-return "rt-good";
-}
-else if(rating >= 3 && rating < 6) {
-return "";
-}
-else {
-return "rt-bad";
-}
-
-}
-
-$ionicModal.fromTemplateUrl('my-modal.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-  $scope.openModal = function() {
-    $scope.modal.show();
+.controller('myCtrl', function($scope, bestAppsApi, $location, $ionicScrollDelegate) {
+  $scope.scrollTo = function(target){
+    $location.hash(target);   
+    var handle = $ionicScrollDelegate.$getByHandle('homeHandle');
+    handle.anchorScroll(true);  
   };
-  $scope.closeModal = function() {
-    $scope.modal.hide();
-  };
-  // Cleanup the modal when we're done with it!
-  $scope.$on('$destroy', function() {
-    $scope.modal.remove();
-  });
-  // Execute action on hide modal
-  $scope.$on('modal.hidden', function() {
-    // Execute action
-  });
-  // Execute action on remove modal
-  $scope.$on('modal.removed', function() {
-    // Execute action
-  });
 
-})
+$scope.showSearch2 = function() {
+  $scope.location = $location.path();
+  if($scope.location == '/app/top-downloaded' || $scope.location == '/app/top-rated' || $scope.location == '/app/all-apps' || $scope.location == '/app/all-games') {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
 
-
-.controller('myCtrl', function($scope, bestAppsApi) {
   $scope.apps = bestAppsApi.getApps();
   $scope.mySelect = 5;
+  if($scope.showH == null || $scope.showH == undefined) {
+$scope.showH = true;
+  }
+  $scope.obj = {query : ''};
+  $scope.showHeader = function() {
+    console.log($scope.showH);
+    $scope.showH = !$scope.showH;
+    console.log($scope.obj.query);
+  }
 
   $scope.checkSubCategory = function(subCatSelect, subCategory) {
-console.log(subCatSelect + " " + subCategory);
     if(subCatSelect === subCategory || subCatSelect === "All") {
       return true;
     }
@@ -104,10 +84,5 @@ console.log(subCatSelect + " " + subCategory);
       return false;
     }
   }
-
-
 })
 
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});

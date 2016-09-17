@@ -1,15 +1,13 @@
 <ion-view view-title="Apps"> 
   
    <ion-content ng-controller="myCtrl">
-<div class="bar bar-header item-input-inset bar-dark" >
+<div class="bar bar-header item-input-inset bar-dark" ng-if="showH === true" >
   <label class="item-input-wrapper">
     <i class="icon ion-ios-search placeholder-icon"></i>
-    <input type="search" placeholder="Search" ng-model="query">
+    <input type="search" placeholder="Search" ng-model="obj.query">
   </label>
-  <a class="clear" ng-click="query = ''">
-  <button class="button button-clear">
-    Cancel
-  </button>
+  <a class="clear" ng-click="obj.query = ''">
+    <button class="button button-clear icon ion-close"></button>
   </a>
 </div>
 
@@ -30,31 +28,14 @@
       <option value="Entertainment">Entertainment</option>
       <option value="Health & Fitness">Health & Fitness</option>
       <option value="Libraries & Demo">Libraries & Demo</option>
-      <option value="Lifestyle">Lifestyle</option>
-      <option value="Media & Video">Media & Video</option>
-      <option value="Medical">Medical</option>
       <option value="Music & Audio">Music & Audio</option>
       <option value="News & Magazines">News & Magazines</option>
-      <option value="Personalization">Personalization</option>
-      <option value="Photography">Photography</option>
-      <option value="Productivity">Productivity</option>
-      <option value="Ringtones">Ringtones</option>
-      <option value="Shopping">Shopping</option>
-      <option value="Social">Social</option>
-      <option value="Soundboards">Soundboards</option>
-      <option value="Sports">Sports</option>
-      <option value="Themes">Themes</option>
       <option value="Tools">Tools</option>
-      <option value="Transportation">Transportation</option>
-      <option value="Travel & Local">Travel & Local</option>
-      <option value="Wallpapers">Wallpapers</option>
-      <option value="Weather">Weather</option>
     </select>
   </label>
       
 
-      <script>var name={{title}}</script>
-      <span ng-repeat="app in apps | filter:query | filter:{ mainCategory: 'Apps' }" ng-if="checkSubCategory(subCat, app.subCategory)">
+      <span ng-repeat="app in apps | filter:{ mainCategory: 'Apps', subCategory: '!'+'Games', title: obj.query }" ng-if="checkSubCategory(subCat, app.subCategory)">
     <a class="item item-avatar item-icon-right" href="#/app/apps/{{app.id}}">
    
       <img src= "{{app.avatar}}">
