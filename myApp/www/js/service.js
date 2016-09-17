@@ -9,7 +9,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/instagram.png",
       "downloads": 100,
       "rating": "4.5",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 7.5,
@@ -84,7 +84,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/tinyscanner.png",
       "downloads": 1,
       "rating": "0.5",
-      "stars": "✡ ✡ ✡ ✡ ✡",
+      "stars": "☆ ☆ ☆ ☆ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 7.5,
@@ -109,7 +109,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/canyouescape.png",
       "downloads": 3,
       "rating": "1",
-      "stars": "✮ ✡ ✡ ✡ ✡",
+      "stars": "✮ ☆ ☆ ☆ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 6.4,
@@ -159,7 +159,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/outlook.png",
       "downloads": 90,
       "rating": "4",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 7.5,
@@ -184,7 +184,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/quizup.png",
       "downloads": 18,
       "rating": "2",
-      "stars": "✮ ✮ ✡ ✡ ✡",
+      "stars": "✮ ✮ ☆ ☆ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 9.5,
@@ -209,7 +209,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/backgammon.png",
       "downloads": 2,
       "rating": "0.2",
-      "stars": " ✡ ✡ ✡ ✡ ✡",
+      "stars": "☆ ☆ ☆ ☆ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 3.5,
@@ -234,7 +234,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/learnsql.png",
       "downloads": 3,
       "rating": "1",
-      "stars": "✮ ✡ ✡ ✡ ✡",
+      "stars": "✮ ☆ ☆ ☆ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 2.5,
@@ -284,7 +284,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/photoshop.png",
       "downloads": 25,
       "rating": "4.3",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 5.5,
@@ -309,7 +309,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/headsup.png",
       "downloads": 75,
       "rating": "4.3",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 8.5,
@@ -334,7 +334,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/fourinaline.png",
       "downloads": 75,
       "rating": "4.3",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 8.5,
@@ -359,7 +359,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/despicableme.png",
       "downloads": 95,
       "rating": "4.3",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 8.5,
@@ -384,7 +384,7 @@ angular.module('starter.service', []).factory('bestAppsApi', function($filter) {
       "avatar": "img/amazon.png",
       "downloads": 100,
       "rating": "4.7",
-      "stars": "✮ ✮ ✮ ✮ ✡",
+      "stars": "✮ ✮ ✮ ✮ ☆",
       "bestAppsInfo": {
          "usabilityDesc": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie, velit ut rutrum mattis, purus erat porttitor velit, nec accumsan tortor nulla vel lectus. ",
          "usabilityRating": 8.5,

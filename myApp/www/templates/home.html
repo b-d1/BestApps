@@ -14,7 +14,7 @@
           <h5><a href="#/app/top-rated">More</a></h5>
         </div>
       </div>
-      <ion-scroll scrollbar-y="false" direction="x" class="home-scrollbar">
+      <ion-scroll direction="x" class="home-scrollbar">
         <div class="padding-left inline apps-home-container" ng-repeat="app in apps | orderBy:'-rating' | limitTo: 4">
           <a href="#/app/apps/{{app.id}}">
             <div class="card home-card">
