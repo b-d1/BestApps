@@ -28,6 +28,4 @@ $ ionic serve --lab
 <img src='https://s14.postimg.org/bno2iteyp/14408124_10207301917201514_1824636200_o.jpg' width="250">
 <img src='https://s14.postimg.org/q9jokt14x/14408299_10207301917801529_493086498_o.jpg' width="250">
 
-### Credits
 
-Made by: Dionis Dinishev, Kristina Mojanovska and Blagoj Dimovski
